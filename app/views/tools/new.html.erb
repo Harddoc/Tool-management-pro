@@ -1,11 +1,11 @@
 <% content_for :title, "New tool" %>
 
-<h1>New tool</h1>
+<h1>Add Tool</h1>
 
 <%= render "form", tool: @tool %>
 
 <br>
 
 <div>
-  <%= link_to "Back to tools", tools_path %>
+  <%= link_to "Back to tools", tools_path , class:"btn btn-primary" %>
 </div>

@@ -11,32 +11,35 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :tool_name, style: "display: block" %>
-    <%= form.text_field :tool_name %>
+<div class="row g-3 align-items-center">
+
+  <div class="col-auto">
+    <%= form.label :tool_name, class:"form-label" %>
+    <%= form.text_field :tool_name, class:"form-control" %>
+  </div>
+
+  <div class="col-auto">
+    <%= form.label :brand_name, class:"form-label" %>
+    <%= form.text_field :brand_name, class:"form-control" %>
+  </div>
+
+  <div class="col-auto">
+    <%= form.label :purchase_date, class:"form-label" %>
+    <%= form.date_field :purchase_date, class:"form-control" %>
+  </div>
+
+  <div class="col-auto">
+    <%= form.label :purchase_location, class:"form-label" %>
+    <%= form.text_field :purchase_location, class:"form-control" %>
+  </div>
+
+  <div class="col-auto">
+    <%= form.label :waranty_lenght, class:"form-label" %>
+    <%= form.text_field :waranty_lenght, class:"form-control" %>
   </div>
 
   <div>
-    <%= form.label :brand_name, style: "display: block" %>
-    <%= form.text_field :brand_name %>
+    <%= form.submit "save", class:"btn btn-primary mt-2" %>
   </div>
-
-  <div>
-    <%= form.label :purchase_date, style: "display: block" %>
-    <%= form.date_field :purchase_date %>
-  </div>
-
-  <div>
-    <%= form.label :purchase_location, style: "display: block" %>
-    <%= form.text_field :purchase_location %>
-  </div>
-
-  <div>
-    <%= form.label :waranty_lenght, style: "display: block" %>
-    <%= form.text_field :waranty_lenght %>
-  </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
+</div>
 <% end %>

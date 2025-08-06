@@ -6,21 +6,23 @@
 
 <%= link_to "New tool", new_tool_path, class:"btn btn-primary" %>
 
-<div id="tools">
-    <% @tools.each do |tool| %>
-    
-  <div class="card mt-2" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-title"><%=tool.tool_name%></h5>
-      <p class="card-text">Brand: <%=tool.brand_name%></p>
-      <p class="card-text">Purchase date:<%=tool.purchase_date%></p>
-      <p class="card-text">Purchase location: <%=tool.purchase_location%></p>
-      <p class="card-text">Waranty Lenght: <%=tool.waranty_lenght%></p>
-      <%= link_to "Show", tool,class:"btn btn-primary" %>
-    </div>
-  </div>
+<div class="container">
+  <div id="tools" class="row">
+      <% @tools.each do |tool| %>
       
-    <% end %>
+    <div class="card m-2" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title"><%=tool.tool_name%></h5>
+        <p class="card-text">Brand: <%=tool.brand_name%></p>
+        <p class="card-text">Purchase date:<%=tool.purchase_date%></p>
+        <p class="card-text">Purchase location: <%=tool.purchase_location%></p>
+        <p class="card-text">Waranty Lenght: <%=tool.waranty_lenght%></p>
+        <%= link_to "Show", tool,class:"btn btn-primary" %>
+      </div>
+    </div>
+        
+      <% end %>
+  </div>
 </div>
 
 
