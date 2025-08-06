@@ -1,0 +1,15 @@
+  <%= link_to "Back to tools", tools_path, class: "btn btn-primary mb-2" %>
+<div class="card" style="width: 18rem;"id="<%= dom_id tool %>">
+  <div class="card-body">
+    <h5 class="card-title"><%=tool.tool_name%></h5>
+    <p class="card-text">Brand name: <%= tool.brand_name %></p>
+    <p class="card-text">Purchase date: <%= tool.purchase_date %></p>
+    <p class="card-text">Purchase location: <%= tool.purchase_location %></p>
+    <p class="card-text">Waranty lenght: <%= tool.waranty_lenght %></p>
+   
+      <%= link_to "Edit tool", edit_tool_path(@tool), class: "btn btn-primary" %>
+      <%= button_to "Delete tool", @tool, method: :delete, class: "btn btn-danger mt-1" %>
+    
+  </div>
+</div>
+
