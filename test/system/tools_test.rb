@@ -27,7 +27,6 @@ class ToolsTest < ApplicationSystemTestCase
 
   test "should update Tool" do
     visit tool_url(@tool)
-    click_on "Show", match: :first
     click_on "Edit this tool"
 
     fill_in "Brand name", with: @tool.brand_name
@@ -43,7 +42,6 @@ class ToolsTest < ApplicationSystemTestCase
 
   test "should destroy Tool" do
     visit tool_url(@tool)
-    click_on "Show", match: :first
     click_on "Delete tool", match: :first
 
     assert_text "Tool was successfully destroyed"
