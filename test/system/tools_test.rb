@@ -27,7 +27,7 @@ class ToolsTest < ApplicationSystemTestCase
 
   test "should update Tool" do
     visit tool_url(@tool)
-    click_on "Edit this tool"
+    click_on "Edit tool"
 
     fill_in "Brand name", with: @tool.brand_name
     fill_in "Purchase date", with: @tool.purchase_date
